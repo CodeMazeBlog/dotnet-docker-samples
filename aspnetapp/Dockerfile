@@ -14,3 +14,7 @@ FROM microsoft/aspnetcore:1.1
 WORKDIR /app
 COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "aspnetapp.dll"]
+
+EXPOSE 3000
+
+ENV PORT 3000
